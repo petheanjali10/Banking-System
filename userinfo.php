@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <link href="./css/style.css" rel="stylesheet"> 
         <style>
-            header{
-        background-color: lightblue;
-        max-height: 100px;
-height: 100%;
-    }
-    footer{
-        background-color: lightblue;
-    }
+         
         p{
             text-align:center;
         }

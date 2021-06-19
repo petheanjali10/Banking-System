@@ -4,14 +4,7 @@
 
 <head>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        header{
-         background-color: lightblue;
-     }
-     footer{
-         background-color: lightblue;
-     }
-    </style> 
+    <link href="style.css" rel="stylesheet">  
     <title>
         Privacy
     </title>
