@@ -19,19 +19,19 @@
 </head>
     <body>
         <!-- Navigation Bar -->
-    <header class="text-gray-600 body-font">
+        <header class="text-gray-600 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                <svg width="100" height="100">
-                    <circle cx="50" cy="50" r="20" fill="blue" />
 
-                </svg>
                 <span class="ml-3 text-xl">Indian Bank</span>
             </a>
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 hover:text-gray-900" href="/Useful Links/AboutUs.html">About Us</a>
-                <a class="mr-5 hover:text-gray-900" href="Service.html">Services</a>
-                <a class="mr-5 hover:text-gray-900" href="/Useful Links/Privacy.html">Privacy</a>
+                <a class="mr-5 hover:text-gray-900" href="index.php">Home</a>
+                <a class="mr-5 hover:text-gray-900" href="about.php">About Us</a>
+                <a class="mr-5 hover:text-gray-900" href="service.php">Services</a>
+                <a class="mr-5 hover:text-gray-900" href="privacy.php">Privacy</a>
+                
+
 
             </nav>
 
@@ -52,7 +52,7 @@ $amount=$_REQUEST["amount"];
 $message=$_REQUEST["message"];
 
 
-$conn= new mysqli("localhost","root","AnjaliSarang@1046","transaction") or die("Unable to connect");
+$conn= new mysqli("localhost","id17090182_root","AnjaliSarang@1046","id17090182_bankingsystem10") or die("Unable to connect");
 
 /*if($conn){
 echo "Connection sucessful<br>";
@@ -67,10 +67,10 @@ $result=mysqli_query($conn,$sql);
 
 
 if ($result){
-    echo "<script type='text/javascript'>alert('Record has been inserted successfully <br>');</script>";
+    echo "<script type='text/javascript'>alert('Record has been inserted successfully ');</script>";
 }
 else{
-    echo "<script type='text/javascript'>alert('Record not inserted  <br>');</script>";
+    echo "<script type='text/javascript'>alert('Record not inserted ');</script>";
 }
 
 

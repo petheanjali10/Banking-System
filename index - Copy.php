@@ -4,32 +4,14 @@
 <head>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet"> 
-    <title>
-        View History
-    </title>
-    <style>
-        
-        h2 {text-align: center;}
-table, th, td {
-  border: 1px solid black;
-  padding: 5px;
-}
-table{
-  border-spacing: 15px;
-border-collapse:collapse;
-margin:25px 0;
-font: size 0.9em;
-min-width: 400px;
+    
+<title>
+Indian Bank
+</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 
-  margin-left: auto;
-  margin-right: auto;
-}
-table,tr{
-    background-color: lightblue;
-}
-
-        
-    </style>
 </head>
 
 <body>
@@ -41,11 +23,9 @@ table,tr{
         <span class="ml-3 text-xl">Indian Bank</span>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-gray-900" href="index.php">Home</a>
         <a class="mr-5 hover:text-gray-900" href="about.php">About Us</a>
         <a class="mr-5 hover:text-gray-900" href="service.php">Services</a>
         <a class="mr-5 hover:text-gray-900" href="privacy.php">Privacy</a>
-        
 
       </nav>
 
@@ -53,49 +33,66 @@ table,tr{
   </header>
     <!-- Navigation Bar ended -->
     <!-- Body part -->
-    
-    <!-- <form  action="history.php" method="POST" > 
-       <button type="submit" name="ViewHistory">View History</button>
-    </form>-->
-      
-        
-        <strong><h2> View History</h2></strong>
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Grow with Us...!
+                </h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Indian Bank is one of the
+                    world's largest banking and financial services organisations.
+                    We serve more than 40 million customers.</p>
+                <div class="flex mt-6 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                </div>
+            </div>
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Profile</h2>
+                        <p class="leading-relaxed text-base">Now you can easily see your profile details.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center" href="profile.php">Profile
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Make Transaction</h2>
+                        <p class="leading-relaxed text-base">Now you can easily withdraw or deposite your money.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center"href="transaction.php">Make Transaction
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Transaction History</h2>
+                        <p class="leading-relaxed text-base">Check your transaction History.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center"href="history.php">Transaction History
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-<?php
-$conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to connect");
-
- /*if($conn){
- echo "Connection sucessful<br>";
-
- }
- else{
- echo "Unable to cnnect<br>";
- }*/
- $sql = "SELECT * FROM transaction.account";
- $result=mysqli_query($conn,$sql);
- echo "<table >"; 
-        echo " <tr >
-            <th>Account Name</th>
-            <th>Account Number</th>
-            <th>Amount</th>
-           
-        </tr><br>";
-       
-       if(mysqli_num_rows($result) >0)
-       {
-       while($row = mysqli_fetch_assoc($result)){ 
-                
-               
-       echo "<tr><td>" . $row['aname'] . "</td><td>" . $row['anumber'] . "</td><td>" . $row['amount']."</td></tr>";  
-       }
-       }
-  echo "</table>"; 
-?>
-
-
-
-    
-    <!-- Body part ended -->
+        </div>
+    </section>
+    <!-- Body part end  -->
     <!-- Footer part -->
     <footer class="text-gray-600 body-font">
         <div
@@ -116,53 +113,36 @@ $conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to c
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About Us</h2>
                     <nav class="list-none mb-10">
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/Overview.html">Overview</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="overview.php">Overview</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/Career.html">Careers</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="career.php">Careers</a>
                         </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/CSR.html">CSR</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/NewsRoom.html">News Room</a>
-                        </li>
+                       
                     </nav>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Useful Links</h2>
                     <nav class="list-none mb-10">
+                      
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/Privacy.html">Privacy</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="links.php">Quick Links</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/AboutUs.html">About Us</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/QuickLinks.html">Quick
-                                Links</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/Terms.html">Terms &
-                                Conditions</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="terms.php">Terms & Conditions</a>
                         </li>
                     </nav>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Need Help</h2>
                     <nav class="list-none mb-10">
+                        
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/FAQ.html">FAQs</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="locate.php">Locate Us</a>
                         </li>
+                       
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/LocateUs.html">Locate Us</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/CustomerCare.html">Customer
-                                care</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/ContactUs.html">Contact Us</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="contact.php">Contact Us</a>
                         </li>
                     </nav>
                 </div>
@@ -212,7 +192,8 @@ $conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to c
     </footer>
     <!-- Footer part eneded -->
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -62,7 +62,7 @@ table,tr{
         <strong><h2> View History</h2></strong>
 
 <?php
-$conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to connect");
+$conn= new mysqli("localhost","root","AnjaliSarang@1046","transaction") or die("Unable to connect");
 
  /*if($conn){
  echo "Connection sucessful<br>";

@@ -4,97 +4,81 @@
 <head>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet"> 
+
     <title>
-        View History
+        Quick Links
     </title>
-    <style>
-        
-        h2 {text-align: center;}
-table, th, td {
-  border: 1px solid black;
-  padding: 5px;
-}
-table{
-  border-spacing: 15px;
-border-collapse:collapse;
-margin:25px 0;
-font: size 0.9em;
-min-width: 400px;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-table,tr{
-    background-color: lightblue;
-}
-
-        
-    </style>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation bar -->
     <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
 
-        <span class="ml-3 text-xl">Indian Bank</span>
-      </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-gray-900" href="index.php">Home</a>
-        <a class="mr-5 hover:text-gray-900" href="about.php">About Us</a>
-        <a class="mr-5 hover:text-gray-900" href="service.php">Services</a>
-        <a class="mr-5 hover:text-gray-900" href="privacy.php">Privacy</a>
-        
+                <span class="ml-3 text-xl">Indian Bank</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900" href="index.php">Home</a>
+                <a class="mr-5 hover:text-gray-900" href="service.php">Services</a>
+                <a class="mr-5 hover:text-gray-900" href="privacy.php">Privacy</a>
+                <a class="mr-5 hover:text-gray-900" href="about.php">About Us</a>
 
-      </nav>
 
-    </div>
-  </header>
-    <!-- Navigation Bar ended -->
+            </nav>
+
+        </div>
+    </header>
+    <!-- Navigation bar eneded -->
     <!-- Body part -->
-    
-    <!-- <form  action="history.php" method="POST" > 
-       <button type="submit" name="ViewHistory">View History</button>
-    </form>-->
-      
-        
-        <strong><h2> View History</h2></strong>
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="-my-8 divide-y-2 divide-gray-100">
+                <div class="py-8 flex flex-wrap md:flex-nowrap">
 
-<?php
-$conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to connect");
+                    <div class="md:flex-grow">
+                        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">FAQ's For Loan Restructuring</h2>
 
- /*if($conn){
- echo "Connection sucessful<br>";
+                        <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
+                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="py-8 flex flex-wrap md:flex-nowrap">
 
- }
- else{
- echo "Unable to cnnect<br>";
- }*/
- $sql = "SELECT * FROM transaction.account";
- $result=mysqli_query($conn,$sql);
- echo "<table >"; 
-        echo " <tr >
-            <th>Account Name</th>
-            <th>Account Number</th>
-            <th>Amount</th>
-           
-        </tr><br>";
-       
-       if(mysqli_num_rows($result) >0)
-       {
-       while($row = mysqli_fetch_assoc($result)){ 
-                
-               
-       echo "<tr><td>" . $row['aname'] . "</td><td>" . $row['anumber'] . "</td><td>" . $row['amount']."</td></tr>";  
-       }
-       }
-  echo "</table>"; 
-?>
+                    <div class="md:flex-grow">
+                        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Doorstep Banking</h2>
 
+                        <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
+                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="py-8 flex flex-wrap md:flex-nowrap">
 
+                    <div class="md:flex-grow">
+                        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Locate Nearest Branch/ATM</h2>
 
-    
+                        <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
+                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Body part ended -->
     <!-- Footer part -->
     <footer class="text-gray-600 body-font">
@@ -116,53 +100,36 @@ $conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to c
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About Us</h2>
                     <nav class="list-none mb-10">
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/Overview.html">Overview</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="overview.php">Overview</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/Career.html">Careers</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="career.php">Careers</a>
                         </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/CSR.html">CSR</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/NewsRoom.html">News Room</a>
-                        </li>
+                       
                     </nav>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Useful Links</h2>
                     <nav class="list-none mb-10">
+                      
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/Privacy.html">Privacy</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="links.php">Quick Links</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/AboutUs.html">About Us</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/QuickLinks.html">Quick
-                                Links</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/Terms.html">Terms &
-                                Conditions</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="terms.php">Terms & Conditions</a>
                         </li>
                     </nav>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Need Help</h2>
                     <nav class="list-none mb-10">
+                        
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/FAQ.html">FAQs</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="locate.php">Locate Us</a>
                         </li>
+                       
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/LocateUs.html">Locate Us</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/CustomerCare.html">Customer
-                                care</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/ContactUs.html">Contact Us</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="contact.php">Contact Us</a>
                         </li>
                     </nav>
                 </div>
@@ -211,8 +178,6 @@ $conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to c
         </div>
     </footer>
     <!-- Footer part eneded -->
-
-
 </body>
 
 </html>

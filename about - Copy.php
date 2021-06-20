@@ -2,39 +2,21 @@
 <html>
 
 <head>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet"> 
-    <title>
-        View History
-    </title>
-    <style>
-        
-        h2 {text-align: center;}
-table, th, td {
-  border: 1px solid black;
-  padding: 5px;
-}
-table{
-  border-spacing: 15px;
-border-collapse:collapse;
-margin:25px 0;
-font: size 0.9em;
-min-width: 400px;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-table,tr{
-    background-color: lightblue;
-}
-
-        
-    </style>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    header{
+     background-color: lightblue;
+ }
+ footer{
+     background-color: lightblue;
+ }
+</style> 
+  <title>About Us</title>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <header class="text-gray-600 body-font">
+  <!-- Navigation bar -->
+  <header class="text-gray-600 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
 
@@ -42,62 +24,63 @@ table,tr{
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
         <a class="mr-5 hover:text-gray-900" href="index.php">Home</a>
-        <a class="mr-5 hover:text-gray-900" href="about.php">About Us</a>
         <a class="mr-5 hover:text-gray-900" href="service.php">Services</a>
         <a class="mr-5 hover:text-gray-900" href="privacy.php">Privacy</a>
-        
 
       </nav>
 
     </div>
   </header>
-    <!-- Navigation Bar ended -->
-    <!-- Body part -->
-    
-    <!-- <form  action="history.php" method="POST" > 
-       <button type="submit" name="ViewHistory">View History</button>
-    </form>-->
-      
-        
-        <strong><h2> View History</h2></strong>
-
-<?php
-$conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to connect");
-
- /*if($conn){
- echo "Connection sucessful<br>";
-
- }
- else{
- echo "Unable to cnnect<br>";
- }*/
- $sql = "SELECT * FROM transaction.account";
- $result=mysqli_query($conn,$sql);
- echo "<table >"; 
-        echo " <tr >
-            <th>Account Name</th>
-            <th>Account Number</th>
-            <th>Amount</th>
-           
-        </tr><br>";
-       
-       if(mysqli_num_rows($result) >0)
-       {
-       while($row = mysqli_fetch_assoc($result)){ 
-                
-               
-       echo "<tr><td>" . $row['aname'] . "</td><td>" . $row['anumber'] . "</td><td>" . $row['amount']."</td></tr>";  
-       }
-       }
-  echo "</table>"; 
-?>
+  <!-- Navigation bar eneded -->
+  <!-- body part -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">Overview</h2>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Who We Are</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Indian Bank is one of India’s leading private banks and
+          was among the first to receive approval from the Reserve Bank of India (RBI) to set up a private sector bank
+          in 1994.
 
 
+          Today, Indian Bank has a banking network of 5,608 branches and 14,897 ATM's in 2,902 cities/towns.</p>
+      </div>
+      <div class="flex flex-wrap">
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Excellence</h2>
+          <p class="leading-relaxed text-base mb-4">Excellence is a talent or quality which is unusually good and so
+            surpasses ordinary standards. It is also used as a standard of performance as measured e.g. through economic
+            indicators.</p>
 
-    
-    <!-- Body part ended -->
-    <!-- Footer part -->
-    <footer class="text-gray-600 body-font">
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Customer Focus</h2>
+          <p class="leading-relaxed text-base mb-4">Customer service is the provision of service to customers before,
+            during, and after a purchase. The perception of success of such interactions is dependent on employees "who
+            can adjust themselves to the personality of the guest".</p>
+
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Product Leadership</h2>
+          <p class="leading-relaxed text-base mb-4">Product management is an organisational function within a company
+            dealing with new product development, business justification, planning, verification, forecasting, pricing,
+            product launch, and marketing of a product or products at all stages of the product lifecycle.</p>
+
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">People</h2>
+          <p class="leading-relaxed text-base mb-4">A people is a plurality of persons considered as a whole, as is the
+            case with an ethnic group, nation or the public of a polity.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- body part eneded -->
+  <!-- Footer part -->
+  <footer class="text-gray-600 body-font">
         <div
             class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
             <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
@@ -116,53 +99,36 @@ $conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to c
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About Us</h2>
                     <nav class="list-none mb-10">
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/Overview.html">Overview</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="overview.php">Overview</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/Career.html">Careers</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="career.php">Careers</a>
                         </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/CSR.html">CSR</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/About US/NewsRoom.html">News Room</a>
-                        </li>
+                       
                     </nav>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Useful Links</h2>
                     <nav class="list-none mb-10">
+                      
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/Privacy.html">Privacy</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="links.php">Quick Links</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/AboutUs.html">About Us</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/QuickLinks.html">Quick
-                                Links</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/Useful Links/Terms.html">Terms &
-                                Conditions</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="terms.php">Terms & Conditions</a>
                         </li>
                     </nav>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Need Help</h2>
                     <nav class="list-none mb-10">
+                        
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/FAQ.html">FAQs</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="locate.php">Locate Us</a>
                         </li>
+                       
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/LocateUs.html">Locate Us</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/CustomerCare.html">Customer
-                                care</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800" href="/NeedHelp/ContactUs.html">Contact Us</a>
+                            <a class="text-gray-600 hover:text-gray-800" href="contact.php">Contact Us</a>
                         </li>
                     </nav>
                 </div>
@@ -211,7 +177,6 @@ $conn= new mysqli("localhost","root","AnjaliSarang@1046","") or die("Unable to c
         </div>
     </footer>
     <!-- Footer part eneded -->
-
 
 </body>
 
